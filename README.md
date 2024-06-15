@@ -1,4 +1,4 @@
-#Пример бат-файла не требующий никакого архиватора который скачивает GIT, Python и ComfyUI, и создает BAT-файл для их тестирования.
+# Пример бат-файла не требующий никакого архиватора который скачивает GIT, Python и ComfyUI, и создает BAT-файл для их тестирования.
 
 >An example of a bat file that does not require any archiver that downloads GIT, Python and ComfiUI, and creates a bat file to run them.
 
