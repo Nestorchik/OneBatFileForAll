@@ -1,5 +1,5 @@
-# Пример бат-файла не требующий никакого архиватора, скачивает GIT, Python, и создает BAT-файл для их тестирования.
+# Примеры бат-файлов инсталляторов не требующие архиватора.
 
->An example of a bat file that does not require any archiver that downloads GIT, Python, and creates a bat file to run them.
+>Examples of bat files of installers that do not require an archiver.
 
->一个 bat 文件的示例，它不需要任何存档器，可以下载 GIT、Python，并创建一个 bat 文件来运行它们。
+>不需要存档程序的安装程序 bat 文件示例。
