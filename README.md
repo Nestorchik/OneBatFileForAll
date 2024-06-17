@@ -1,5 +1,4 @@
-# Примеры бат-файлов инсталляторов не требующие архиватора
+# Примеры бат-файлов скачивания и инсталляции без внешнего архиватора
 
->Examples of bat files of installers that do not require an archiver
-
->不需要存档程序的安装程序 bat 文件示例
+>Examples of bat files for downloading and installing without an external archiver
+>无需外部归档程序即可下载和安装 bat 文件的示例
