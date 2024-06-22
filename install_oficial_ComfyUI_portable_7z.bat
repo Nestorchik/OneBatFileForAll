@@ -16,6 +16,7 @@ echo Downloading wget...
 echo -------------------------------------------------------------------------------------------------------------------
 curl --ssl-no-revoke -L -o wget.exe https://github.com/Nestorchik/wget/releases/download/wget_portable/wget.exe
 echo Done
+:: Don't forget to add the paths to the downloaded files to PATH
 echo Downloading ComfyUI_portable and 7z...
 echo -------------------------------------------------------------------------------------------------------------------
 %curDir%wget -c -q --show-progress https://github.com/Nestorchik/7z/releases/download/7z/7z.zip

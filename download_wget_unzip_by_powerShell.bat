@@ -19,6 +19,7 @@ echo Run UnZip command...
 powershell -command "Expand-Archive -Force '%curDir%git.zip' '%curDir%git_portable_free_name_folder'"
 powershell -command "Expand-Archive -Force '%curDir%python_embeded.zip' '%curDir%python_portable_free_name_folder'"
 echo Done
+:: Don't forget to add the paths to the downloaded files to PATH
 echo -------------------------------------------------------------------------------------------------------------------
 :: Garbage removal
 if exist "%curDir%.wget-hsts" del /f /q "%curDir%.wget-hsts"

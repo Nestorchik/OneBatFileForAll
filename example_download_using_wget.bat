@@ -8,7 +8,8 @@ echo ---------------------------------------------------------------------------
 curl --ssl-no-revoke -L -o wget.exe https://github.com/Nestorchik/wget/releases/download/wget_portable/wget.exe
 echo Done - downloading wget
 echo -------------------------------------------------------------------------------------------------------------------
-echo Downloading models
+echo Downloading files
+:: Don't forget to add the paths to the downloaded files to PATH
 echo -------------------------------------------------------------------------------------------------------------------
 %curDir%wget -c -q --show-progress https://github.com/Nestorchik/git/releases/download/git_portable/git.zip
 echo -------------------------------------------------------------------------------------------------------------------
