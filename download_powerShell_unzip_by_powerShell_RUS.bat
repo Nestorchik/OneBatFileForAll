@@ -12,21 +12,21 @@ echo ===========================================================================
 pause
 :: Секция скачивания
 echo Скачиваем git...
-powershell -command "Invoke-WebRequest 'https://github.com/Nestorchik/git/releases/download/git_portable/git.zip' -OutFile 'git.zip'"
+powershell -c "Invoke-WebRequest 'https://github.com/Nestorchik/git/releases/download/git_portable/git.zip' -OutFile 'git.zip'"
 echo Готово
 echo =======================================================================================================
 echo Скачиваем Python...
-powershell -command "Invoke-WebRequest 'https://github.com/Nestorchik/python_embeded/releases/download/python_embeded/python_embeded.zip' -OutFile 'python_embeded.zip'"
+powershell -c "Invoke-WebRequest 'https://github.com/Nestorchik/python_embeded/releases/download/python_embeded/python_embeded.zip' -OutFile 'python_embeded.zip'"
 echo Готово
 ::
 :: Секция разархивации
 echo =======================================================================================================
 echo Разархивируем git...
-powershell -command "Expand-Archive -Force 'git.zip' 'git_portable_free_name_folder'"
+powershell -c "Expand-Archive -Force 'git.zip' 'git_portable_free_name_folder'"
 echo Готово
 echo =======================================================================================================
 echo Разархивируем Python
-powershell -command "Expand-Archive -Force 'python_embeded.zip' 'python_portable_free_name_folder'"
+powershell -c "Expand-Archive -Force 'python_embeded.zip' 'python_portable_free_name_folder'"
 echo Готово
 :: Не забудьте добавить в PATH пути на скачанное
 ::
