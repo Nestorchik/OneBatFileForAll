@@ -10,8 +10,8 @@ echo Done
 echo -------------------------------------------------------------------------------------------------------------------
 echo Downloading ZIP-files...
 echo -------------------------------------------------------------------------------------------------------------------
-%curDir%wget -c -q --show-progress https://github.com/Nestorchik/git/releases/download/git_portable/git.zip
-%curDir%wget -c -q --show-progress https://github.com/Nestorchik/python_embeded/releases/download/python_embeded/python_embeded.zip
+%curDir%wget -c -q --show-progress --no-check-certificate https://github.com/Nestorchik/git/releases/download/git_portable/git.zip
+%curDir%wget -c -q --show-progress --no-check-certificate https://github.com/Nestorchik/python_embeded/releases/download/python_embeded/python_embeded.zip
 echo Done
 echo -------------------------------------------------------------------------------------------------------------------
 echo Run UnZip command...

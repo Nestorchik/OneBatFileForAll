@@ -19,8 +19,8 @@ echo Done
 :: Don't forget to add the paths to the downloaded files to PATH
 echo Downloading ComfyUI_portable and 7z...
 echo -------------------------------------------------------------------------------------------------------------------
-%curDir%wget -c -q --show-progress https://github.com/Nestorchik/7z/releases/download/7z/7z.zip
-%curDir%wget -c -q --show-progress https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable_nvidia_cu121_or_cpu.7z
+%curDir%wget -c -q --show-progress --no-check-certificate https://github.com/Nestorchik/7z/releases/download/7z/7z.zip
+%curDir%wget -c -q --show-progress --no-check-certificate https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable_nvidia_cu121_or_cpu.7z
 echo Done
 if exist "wget.exe" del /f /q "wget.exe"
 if exist ".wget-hsts" del /f /q ".wget-hsts"
