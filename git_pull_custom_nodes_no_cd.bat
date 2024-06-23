@@ -1,3 +1,4 @@
+setlocal
 :: Don't forget to add the paths to the downloaded files to PATH
 :: set GIT_EXEC_PATH=%CD%\git\bin;%C D%\git\libexec;%CD%\git\libexec\git-core
 set custom_n=%CD%\ComfyUI\custom_nodes
