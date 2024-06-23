@@ -15,7 +15,8 @@ if exist "%curDir%git.zip" del /f /q "%curDir%git.zip"
 echo ========================================================================================================
 echo Done - UnZip git
 echo ========================================================================================================
-set PATH=%PATH%;%curDir%git\bin;%curDir%git\libexec\;
+set PATH=%PATH%;%curDir%git\bin;%curDir%git\libexec\
+set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core
 echo Downloading Python 3.10.11
 echo ========================================================================================================
 %curDir%git\bin\git clone https://github.com/Nestorchik/python

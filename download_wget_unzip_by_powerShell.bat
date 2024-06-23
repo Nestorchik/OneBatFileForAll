@@ -1,6 +1,7 @@
 @echo off
 setlocal
 cd /d %~dp0
+set curDir=%~dp0
 :: Download secction
 echo -------------------------------------------------------------------------------------------------------------------
 echo Downloading wget...
@@ -20,6 +21,7 @@ powershell -command "Expand-Archive -Force '%curDir%git.zip' '%curDir%git_portab
 powershell -command "Expand-Archive -Force '%curDir%python_embeded.zip' '%curDir%python_portable_free_name_folder'"
 echo Done
 :: Don't forget to add the paths to the downloaded files to PATH
+:: set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core
 echo -------------------------------------------------------------------------------------------------------------------
 :: Garbage removal
 if exist "%curDir%.wget-hsts" del /f /q "%curDir%.wget-hsts"

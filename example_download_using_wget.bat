@@ -10,6 +10,7 @@ echo Done - downloading wget
 echo -------------------------------------------------------------------------------------------------------------------
 echo Downloading files
 :: Don't forget to add the paths to the downloaded files to PATH
+:: set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core
 echo -------------------------------------------------------------------------------------------------------------------
 %curDir%wget -c -q --show-progress --no-check-certificate https://github.com/Nestorchik/git/releases/download/git_portable/git.zip
 echo -------------------------------------------------------------------------------------------------------------------

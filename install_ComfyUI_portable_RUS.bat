@@ -3,6 +3,7 @@ setlocal
 cd /d %~dp0
 set curDir=%~dp0
 :: Don't forget to add the paths to the downloaded files to PATH
+:: set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core
 echo ========================================================================================================
 echo              Этот скрипт скачает и установит в текущую папку портабельную версию ComfyUI
 echo               с портабельным питоном и GIT, установит все пакеты питона для карт NVIDIA
@@ -63,6 +64,7 @@ echo Строим и записываем bat-файл...
 echo setlocal>run.bat
 echo cd /d %~dp0 >>run.bat
 echo set PATH=%curDir%git\bin;%curDir%git\libexec\;%curDir%python;%curDir%\python\Library\bin;%curDir%python\Scripts >> run.bat
+echo set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core >> run.bat
 echo %curDir%python\python %curDir%ComfyUI\main.py --auto-launch >> run.bat
 echo ========================================================================================================
 echo Запускаем ComfyUI...
