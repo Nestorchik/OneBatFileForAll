@@ -2,8 +2,6 @@
 setlocal
 cd /d %~dp0
 set curDir=%~dp0
-:: Don't forget to add the paths to the downloaded files to PATH
-:: set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core
 echo ========================================================================================================
 echo              Этот скрипт скачает и установит в текущую папку портабельную версию ComfyUI
 echo               с портабельным питоном и GIT, установит все пакеты питона для карт NVIDIA
@@ -27,12 +25,12 @@ echo Готово
 echo ========================================================================================================
 echo Скачиваем python...
 echo ========================================================================================================
-curl --ssl-no-revoke -L -o python.zip https://github.com/Nestorchik/python_embeded/releases/download/python_embeded/python_embeded.zip
+curl --ssl-no-revoke -L -o python312.pak https://github.com/Nestorchik/python/releases/download/all/python312.pak
 echo Готово
 echo ========================================================================================================
 echo Разархивируем python
-Call :UnZipFile "%curDir%python" "%curDir%python.zip"
-if exist "%curDir%python.zip" del /f /q "%curDir%python.zip"
+expand python312.pak .\ -F:*
+if exist "python312.pak" del /f /q "python312.pak"
 echo Готово
 set PATH=%curDir%git\bin;%curDir%git\libexec\;%curDir%python;%curDir%\python\Library\bin;%curDir%python\Scripts
 echo ========================================================================================================
@@ -48,11 +46,14 @@ cd %curDir%ComfyUI\custom_nodes
 cd %curDir%
 echo Готово
 echo ========================================================================================================
-echo Инсталлируем пакеты питона для карт NVIDIA:
-echo ... torch torchvision torchaudio insightface==0.7.3
+echo Обновляем менеджер пакетов "PIP":
+%curDir%python\python -m pip install --upgrade pip
+echo Готово
 echo ========================================================================================================
-%curDir%python\python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-%curDir%python\python -m pip install insightface==0.7.3
+echo Инсталлируем пакеты питона для карт NVIDIA:
+echo ... torch torchvision torchaudio
+echo ========================================================================================================
+%curDir%python\python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 echo ========================================================================================================
 echo Готово
 echo Инсталлируем пакеты ComfyUI...
@@ -61,15 +62,16 @@ echo ===========================================================================
 echo Готово
 echo ========================================================================================================
 echo Строим и записываем bat-файл...
-echo setlocal>run.bat
+echo @echo off>run.bat
+echo setlocal>>run.bat
 echo cd /d %~dp0 >>run.bat
 echo set PATH=%curDir%git\bin;%curDir%git\libexec\;%curDir%python;%curDir%\python\Library\bin;%curDir%python\Scripts >> run.bat
 echo set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core >> run.bat
-echo %curDir%python\python %curDir%ComfyUI\main.py --auto-launch >> run.bat
+echo %curDir%python\python -s %curDir%ComfyUI\main.py --windows-standalone-build >> run.bat
 echo ========================================================================================================
 echo Запускаем ComfyUI...
 echo ========================================================================================================
-%curDir%python\python %curDir%ComfyUI\main.py --auto-launch
+%curDir%python\python -s %curDir%ComfyUI\main.py --windows-standalone-build
 echo ========================================================================================================
 exit /b
 :UnZipFile <ExtractTo> <newzipfile>
