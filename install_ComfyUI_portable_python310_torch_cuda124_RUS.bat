@@ -32,7 +32,7 @@ echo Разархивируем python
 expand python310.pak .\ -F:*
 if exist "python310.pak" del /f /q "python310.pak"
 echo Готово
-set PATH=%curDir%git\bin;%curDir%git\libexec\;%curDir%python;%curDir%\python\Library\bin;%curDir%python\Scripts
+set PATH=%curDir%git\bin;%curDir%git\libexec\;%curDir%python;%curDir%python\Library\bin;%curDir%python\Scripts
 echo ========================================================================================================
 echo Скачиваем "ComfyUI"...
 echo ========================================================================================================
