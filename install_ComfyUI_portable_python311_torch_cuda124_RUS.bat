@@ -32,7 +32,7 @@ echo Разархивируем python
 expand python311.pak .\ -F:*
 if exist "python311.pak" del /f /q "python311.pak"
 echo Готово
-set PATH=%curDir%git\bin;%curDir%git\libexec\;%curDir%python;%curDir%python\Library\bin;%curDir%python\Scripts
+set PATH=%curDir%git\bin;%curDir%git\mingw64\bin;%curDir%git\mingw64\libexec\git-core\;%curDir%python;%curDir%python\Library\bin;%curDir%python\Scripts
 echo ========================================================================================================
 echo Скачиваем "ComfyUI"...
 echo ========================================================================================================
@@ -65,8 +65,8 @@ echo Строим и записываем bat-файл...
 echo @echo off>run.bat
 echo setlocal>>run.bat
 echo cd /d %~dp0 >>run.bat
-echo set PATH=%curDir%git\bin;%curDir%git\libexec\;%curDir%python;%curDir%python\Library\bin;%curDir%python\Scripts >> run.bat
-echo set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core >> run.bat
+echo set PATH=%curDir%git\bin;%curDir%git\mingw64\bin;%curDir%git\mingw64\libexec\git-core;%curDir%python;%curDir%python\Library\bin;%curDir%python\Scripts >> run.bat
+echo set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\mingw64\bin;%curDir%git\mingw64\libexec\git-core>> run.bat
 echo %curDir%python\python -s %curDir%ComfyUI\main.py --windows-standalone-build >> run.bat
 echo ========================================================================================================
 echo Запускаем ComfyUI...

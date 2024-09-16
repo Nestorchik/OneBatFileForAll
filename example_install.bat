@@ -16,7 +16,7 @@ echo ===========================================================================
 echo Done - UnZip git
 echo ========================================================================================================
 set PATH=%PATH%;%curDir%git\bin;%curDir%git\libexec\
-set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\libexec;%curDir%git\libexec\git-core
+set GIT_EXEC_PATH=%curDir%git\bin;%curDir%git\mingw64\bin;%curDir%git\mingw64\libexec\git-core
 echo Downloading Python 3.10.11
 echo ========================================================================================================
 %curDir%git\bin\git clone https://github.com/Nestorchik/python
