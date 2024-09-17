@@ -19,7 +19,7 @@ pause
 setlocal
 cls
 echo
-:: »змените в следующей строке путь к вашему питону.
+:: »змените в следующей строке путь к вашему питону. 
 set python=c:\p312\python.exe
 set startDir=%CD%
 set comfy=%startDir%\ComfyUI
