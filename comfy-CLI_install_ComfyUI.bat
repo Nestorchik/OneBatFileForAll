@@ -11,7 +11,7 @@ echo ===========================================================================
 :: In this example - python x86_64_windows 
 echo Downloading "Python"...
 curl --ssl-no-revoke -L -o python.gz https://github.com/indygreg/python-build-standalone/releases/download/20240909/cpython-3.12.6+20240909-x86_64-pc-windows-msvc-shared-install_only_stripped.tar.gz
-tar -xvzf python.gz >nul
+tar -xzf python.gz
 if exist "%CD%\python.gz" del /f /q "%CD%\python.gz"
 echo done
 echo ================================================================================
