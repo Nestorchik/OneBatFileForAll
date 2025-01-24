@@ -6,6 +6,7 @@ cd /D %curDIR%
 powershell -c "Invoke-WebRequest 'https://github.com/Nestorchik/UV/releases/download/uv/uv-x86_64-pc-windows-msvc.zip' -OutFile 'uv.zip'"
 powershell -c "Expand-Archive -Force 'uv.zip' '%CD%'"
 if exist "uv.zip" del /f /q "uv.zip"
+uv python install 3.12
 git clone https://github.com/comfyanonymous/ComfyUI.git
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git "%curDIR%\ComfyUI\custom_nodes\ComfyUI-Manager"
 uv venv --python 3.12

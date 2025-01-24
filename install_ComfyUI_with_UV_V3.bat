@@ -1,6 +1,7 @@
 @echo off && cd /D %CD%
 echo Installing "UV+ComfyUI"
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+uv python install 3.12
 powershell -c "Invoke-WebRequest 'https://github.com/comfyanonymous/ComfyUI/archive/refs/heads/master.zip' -OutFile 'ComfyUI.zip'"
 powershell -c "Expand-Archive -Force 'ComfyUI.zip' '%CD%'"
 ren ComfyUI-master ComfyUI && if exist "ComfyUI.zip" del /f /q "ComfyUI.zip"
