@@ -4,7 +4,7 @@ uv python install 3.12
 git clone https://github.com/comfyanonymous/ComfyUI.git
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git "%CD%\ComfyUI\custom_nodes\ComfyUI-Manager"
 uv venv --python 3.12
-uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu129
 uv pip install pip
 uv pip install -r "%CD%\ComfyUI\requirements.txt"
 echo cd "%CD%" >run.bat
