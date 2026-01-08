@@ -4,7 +4,7 @@ where uv >nul 2>&1 && uv self update || powershell -ExecutionPolicy ByPass -c "i
 git clone https://github.com/comfyanonymous/ComfyUI.git
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git "%CD%\ComfyUI\custom_nodes\ComfyUI-Manager"
 uv venv --python 3.12.12 --seed --clear
-uv pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu130
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu129
 uv pip install -r "%CD%\ComfyUI\requirements.txt"
 uv pip install -r "%CD%\ComfyUI\custom_nodes\ComfyUI-Manager\requirements.txt"
 echo cd "%CD%" >run.bat
